@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-public class ShopTest extends BaseTest{
+public class ShopTest extends BaseTest{  //istrinam komentarus
 
     //    1. Go to Homestore Shop page: https://themes.woocommerce.com/homestore/shop/
 //2. Click page change arrow button.
