@@ -56,4 +56,28 @@ public class AddToCartTest extends BaseTest{
         assertTrue(addToCartPage.headerCartViewButton.isDisplayed());
         assertTrue(addToCartPage.headerCheckOutButton.isDisplayed());
     }
+
+    @Test
+    @DisplayName("Navigate to cart page with View cart button")
+    public void clickViewCartButton() {
+        AddToCartPage addToCartPage= new AddToCartPage(driver);
+        addToCartPage.goToPage();
+        addToCartPage.clickAddToCartButton();
+        addToCartPage.waitForViewCartButton();
+        addToCartPage.clickProductViewCartButton();
+
+        assertThat(addToCartPage.getProductCartPage()).isEqualTo("Cart");
+    }
+
+    @Test
+    @DisplayName("Navigate to cart page with cart information block")
+    public void clickCartInformationBlock() {
+        AddToCartPage addToCartPage= new AddToCartPage(driver);
+        addToCartPage.goToPage();
+        addToCartPage.clickAddToCartButton();
+        addToCartPage.waitForViewCartButton();
+        addToCartPage.clickHeaderCartItemAmountText();
+
+        assertThat(addToCartPage.getProductCartPage()).isEqualTo("Cart");
+    }
 }

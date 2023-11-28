@@ -28,6 +28,10 @@ public class AddToCartPage extends BasePage {
     @FindBy(xpath = "//a[@title='View cart']")
     WebElement productViewCartButton;
 
+    public void clickProductViewCartButton() {
+        productViewCartButton.click();
+    }
+
     public void waitForViewCartButton() {
         WebDriverWait wait = new WebDriverWait(this.driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@title='View cart']")));
@@ -52,6 +56,10 @@ public class AddToCartPage extends BasePage {
 
     public String getHeaderCartItemAmountText() {
         return headerCartItemAmount.getText();
+    }
+
+    public void clickHeaderCartItemAmountText() {
+         headerCartItemAmount.click();
     }
 
     public void hoverCart() {
@@ -86,4 +94,11 @@ public class AddToCartPage extends BasePage {
 
     @FindBy(xpath = "//ul[@id='site-header-cart']//a[normalize-space()='Checkout']")
     WebElement headerCheckOutButton;
+
+    @FindBy(css = ".entry-title")
+    WebElement productCartPage;
+
+    public String getProductCartPage() {
+        return productCartPage.getText();
+    }
 }
