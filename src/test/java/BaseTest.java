@@ -15,7 +15,7 @@ public class BaseTest {
         driver = new ChromeDriver(options);
     }
 
-//    @AfterEach
+//    @AfterEach                //sita atkomentuojam
 //    void tearDown() {
 //        driver.quit();
 //    }
